@@ -1,0 +1,38 @@
+su - hdoop
+./start-hadoop.sh
+
+
+hdfs dfs -mkdir -p input
+
+hdfs dfs -put /home/student/PERSISTENT/Bigdata_abgabe/Hadoop_Abgabe/data/fluege.csv input
+
+
+hadoop jar /home/student/PERSISTENT/Bigdata_abgabe/Hadoop_Abgabe/target/portofolioBigData-1.jar CustomerPointsJob input intermediate-output
+
+
+
+hadoop jar /home/student/PERSISTENT/Bigdata_abgabe/Hadoop_Abgabe/target/portofolioBigData-1.jar CustomerGroupPointsJob intermediate-output final-output
+
+
+
+hdfs dfs -rm -r -f final-output
+
+hdfs dfs -ls /user/hdoop/intermediate-output
+hdfs dfs -cat /user/hdoop/intermediate-output/part-r-00000
+http://localhost:9870/dfshealth.html#tab-overview
+
+hdoop@ubuntu2004:~$ hdfs dfs -cat /user/hdoop/final-output/part-r-00000
+Gruppe1_Bis2000Punkte	AnzahlKunden: 4482, SummePunkte: 3098330
+Gruppe2_2001Bis10000Punkte	AnzahlKunden: 12252, SummePunkte: 47045669
+Gruppe3_Ueber10000Punkte	AnzahlKunden: 3, SummePunkte: 31206
+hdoop@ubuntu2004:~$
+
+
+Gruppe1_Bis2000Punkte	AnzahlKunden: 4482, SummePunkte: 0, ProzentEingeloest: 0.00%
+Gruppe2_2001Bis10000Punkte	AnzahlKunden: 12252, SummePunkte: 0, ProzentEingeloest: 0.00%
+Gruppe3_Ueber10000Punkte	AnzahlKunden: 3, SummePunkte: 0, ProzentEingeloest: 0.00%
+
+100018	5377	1513
+100102	4116	1195
+100140	4184	593
+100214	3426	861
