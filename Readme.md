@@ -1,6 +1,6 @@
 # Hinweis
 
-Dies ist nur die \texttt{README.md} für eigene Zwecke. Die für die Abgabe bestimmte PDF-Datei liegt im Verzeichnis.
+Dies ist nur die README.md für eigene Zwecke und GitHub (https://github.com/AbdulazizAl-Surabi/BigDataStorage_Portfolio). Die für die Abgabe bestimmte PDF-Datei namens `BigDataStorageBeschreibung.pdf` liegt im Hauptverzeichnis `HADOOP_ABGABE`.
 
 # Hadoop MapReduce Job Anleitung für das Modul Big Data Storage
 
