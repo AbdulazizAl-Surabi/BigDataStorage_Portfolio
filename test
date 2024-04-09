@@ -1,5 +1,0 @@
-./start-hadoop.sh
-hdfs dfs -mkdir -p /user/hdoop/inpute
-hdfs dfs -put /home/student/PERSISTENT/Bigdata_abgabe/Hadoop_Abgabe/data/fluege.csv input
-hadoop jar /home/student/PERSISTENT/Bigdata_abgabe/Hadoop_Abgabe/target/portofolioBigData-1.jar CustomerPointsJob input intermediate-
-hadoop jar /home/student/PERSISTENT/Bigdata_abgabe/Hadoop_Abgabe/target/portofolioBigData-1.jar CustomerGroupPointsJob intermediate-output final-output
